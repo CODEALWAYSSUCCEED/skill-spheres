@@ -1,158 +1,18 @@
-export type ResourceType = 'article' | 'video' | 'research_paper' | 'tool' | 'template' | 'other';
-export type ResourceVisibility = 'private' | 'shared';
-
-export interface Resource {
-  id: string;
-  user_id: string;
-  title: string;
-  url: string;
-  description: string;
-  type: ResourceType;
-  tags: string[];
-  linked_skill_id: string | null;
-  linked_studio_id: string | null;
-  milestone_id: string | null;
-  visibility: ResourceVisibility;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface ResourceWithUser extends Resource {
-  users?: {
-    full_name: string;
-    email: string;
-  };
-  skill?: {
-    id: string;
-    title: string;
-  } | null;
-  milestone?: {
-    id: string;
-    title: string;
-  } | null;
-}
-
-export interface CreateResourceData {
-  title: string;
-  url: string;
-  description?: string;
-  type: ResourceType;
-  tags?: string[];
-  linked_skill_id?: string | null;
-  linked_studio_id?: string | null;
-  milestone_id?: string | null;
-  visibility?: ResourceVisibility;
-}
-
-export interface UpdateResourceData {
-  title?: string;
-  url?: string;
-  description?: string;
-  type?: ResourceType;
-  tags?: string[];
-  linked_skill_id?: string | null;
-  linked_studio_id?: string | null;
-  milestone_id?: string | null;
-  visibility?: ResourceVisibility;
-}
-
-export type SkillResourceType = 'article' | 'video' | 'tool' | 'template' | 'dataset' | 'paper' | 'notes' | 'other';
-export type ResourceKind = 'link' | 'upload';
-
-export interface SkillResource {
-  id: string;
-  skill_id: string;
-  studio_id: string | null;
-  user_id: string;
-  title: string;
-  description: string;
-  type: SkillResourceType;
-  tags: string[];
-  resource_kind: ResourceKind;
-  url: string | null;
-  file_url: string | null;
-  file_name: string | null;
-  file_type: string | null;
-  file_size: number | null;
-  visibility: ResourceVisibility;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface SkillResourceWithUser extends SkillResource {
-  users?: {
-    full_name: string;
-    email: string;
-  };
-}
-
-export interface CreateSkillResourceData {
-  skill_id: string;
-  studio_id?: string | null;
-  title: string;
-  description?: string;
-  type: SkillResourceType;
-  tags?: string[];
-  resource_kind: ResourceKind;
-  url?: string | null;
-  file_url?: string | null;
-  file_name?: string | null;
-  file_type?: string | null;
-  file_size?: number | null;
-  visibility?: ResourceVisibility;
-}
-
-export interface UpdateSkillResourceData {
-  title?: string;
-  description?: string;
-  type?: SkillResourceType;
-  tags?: string[];
-  visibility?: ResourceVisibility;
-}
-
-export type VideoKind = 'upload' | 'link';
-
-export interface VideoReflection {
-  id: string;
-  skill_id: string;
-  studio_id: string | null;
-  user_id: string;
-  title: string;
-  notes: string;
-  video_kind: VideoKind;
-  external_url: string | null;
-  video_url: string | null;
-  file_name: string | null;
-  file_type: string | null;
-  file_size: number | null;
-  visibility: ResourceVisibility;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface VideoReflectionWithUser extends VideoReflection {
-  users?: {
-    full_name: string;
-    email: string;
-  };
-}
-
-export interface CreateVideoReflectionData {
-  skill_id: string;
-  studio_id?: string | null;
-  title: string;
-  notes?: string;
-  video_kind: VideoKind;
-  external_url?: string | null;
-  video_url?: string | null;
-  file_name?: string | null;
-  file_type?: string | null;
-  file_size?: number | null;
-  visibility?: ResourceVisibility;
-}
-
-export interface UpdateVideoReflectionData {
-  title?: string;
-  notes?: string;
-  visibility?: ResourceVisibility;
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["vite.config.ts"]
 }

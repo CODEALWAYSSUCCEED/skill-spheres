@@ -1,52 +1,20 @@
-export type SkillStatus = 'not_started' | 'in_progress' | 'completed';
-
-export type MilestoneType = 'reading' | 'exercise' | 'reflection' | 'upload' | 'quiz' | 'live' | 'practice';
-
-export interface UserSkill {
-  id: string;
-  user_id: string;
-  skill_id: string;
-  status: SkillStatus;
-  started_at: string | null;
-  completed_at: string | null;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface Milestone {
-  id: string;
-  skill_id: string;
-  title: string;
-  description: string;
-  order_index: number;
-  milestone_type: MilestoneType;
-  required: boolean;
-  created_at?: string;
-}
-
-export interface UserMilestone {
-  id: string;
-  user_id: string;
-  milestone_id: string;
-  completed_at: string;
-}
-
-export interface SkillProgress {
-  skill_id: string;
-  status: SkillStatus;
-  total_milestones: number;
-  completed_milestones: number;
-  required_milestones: number;
-  completed_required_milestones: number;
-  progress_percentage: number;
-  started_at: string | null;
-  completed_at: string | null;
-}
-
-export interface MilestoneWithCompletion extends Milestone {
-  type?: string;
-  is_required?: boolean;
-  estimated_minutes?: number | null;
-  is_completed: boolean;
-  completed_at: string | null;
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
 }
