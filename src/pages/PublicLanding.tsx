@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabase';
 import {
   Menu, X, Phone, GraduationCap, Users, Brain, Trophy,
   Globe, Target, Calculator, Code2, CheckCircle, ArrowRight,
-  Rocket, BookOpen, Clock, Star, ChevronDown, Calendar, Send, MapPin, Mail
+  BookOpen, Clock, Star, ChevronDown, Calendar, Send, MapPin, Mail
 } from 'lucide-react';
 import { PiLogo } from '../components/Layout';
 
@@ -81,9 +81,6 @@ const navLinks = [
   { label: 'Contact', anchor: 'contact' },
 ];
 
-function openSkillSphere() {
-  window.open(window.location.href, '_blank', 'noopener,noreferrer');
-}
 
 export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -157,9 +154,9 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
   const faqs = [
     { q: 'Who is 317 Solutions for?', a: 'We serve school and college students looking to build CS and Math skills, as well as professionals seeking executive coaching and AI literacy. Evenings and weekends make it accessible for everyone.' },
     { q: 'What drives 317 Solutions\' curriculum?', a: 'Our curriculum is grounded in ongoing research and innovation, continuously evolving to reflect the latest advances in AI, technology, and STEM, ensuring learners build skills that are relevant, practical, and future-ready.' },
-    { q: 'What is Skill Sphere?', a: 'Skill Sphere is our interactive learning platform where enrolled students and mentors track skill progression, complete capstone projects, access curated resources, and collaborate in problem studios.' },
-    { q: 'How do I get started?', a: 'Call us at xxx-xxx-xxxx or click "Get Started Today" to create a Skill Sphere account. Sessions are available evenings and weekends, 1-on-1 or in small groups.' },
+    { q: 'How do I get started?', a: 'Call us at xxx-xxx-xxxx or click "Get Started Today" to create an account. Sessions are available evenings and weekends, 1-on-1 or in small groups.' },
     { q: 'What subjects do you cover?', a: 'We cover Mathematics (Arithmetic through Linear Algebra, AP courses), Computer Science (Coding, Data Science, Machine Learning), Artificial Intelligence (Generative AI, Prompt Engineering, AI Systems), and Technology & Engineering (Cybersecurity, Cloud, DevOps).' },
+    { q: 'What is the learning platform?', a: 'Our interactive learning platform lets enrolled students and mentors track skill progression, complete capstone projects, access curated resources, and collaborate in problem studios.' },
   ];
 
   return (
@@ -187,14 +184,6 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
                   <span className="absolute bottom-0 left-4 right-4 h-px bg-amber-400 opacity-0 group-hover:opacity-40 transition-opacity" />
                 </button>
               ))}
-              <div className="mx-1.5 h-4 w-px bg-white/20" />
-              <button
-                onClick={openSkillSphere}
-                className="flex items-center gap-1.5 px-3.5 py-2 text-sm font-black text-amber-300 hover:text-amber-200 hover:bg-amber-400/10 rounded-lg transition-all border border-amber-400/30 hover:border-amber-400/60"
-                title="Open Skill Sphere in new tab"
-              >
-                <Rocket className="w-3.5 h-3.5" /> Skill Sphere
-              </button>
             </nav>
 
             <div className="hidden md:flex items-center gap-2">
@@ -233,13 +222,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
                 <a href="tel:xxxxxxxxxx" className="flex items-center gap-2 px-3 py-2 text-amber-300 font-semibold text-sm">
                   <Phone className="w-4 h-4" /> xxx-xxx-xxxx
                 </a>
-                <button
-                  onClick={() => { openSkillSphere(); setMobileOpen(false); }}
-                  className="w-full border border-amber-400/40 text-amber-300 font-black py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 hover:bg-amber-400/10 transition-all"
-                >
-                  <Rocket className="w-4 h-4" /> Skill Sphere (opens new tab)
-                </button>
-                <button onClick={() => { onGetStarted(); setMobileOpen(false); }}
+<button onClick={() => { onGetStarted(); setMobileOpen(false); }}
                   className="w-full bg-amber-400 text-blue-900 font-black py-2.5 rounded-lg text-sm flex items-center justify-center gap-2">
                   Get Started
                 </button>
@@ -298,7 +281,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
             <div className="mt-6 lg:mt-0">
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
                 <img
-                  src="/image copy copy copy copy.png"
+                  src="/images/image.png"
                   alt="317 Solutions: Skill Development in AI, Technology, Engineering, CS and Mathematics"
                   className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
@@ -432,7 +415,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
               <div className="border-t border-white/10 pt-5 space-y-2.5">
                 <button onClick={onGetStarted}
                   className="w-full bg-amber-400 hover:bg-amber-500 text-blue-900 font-black py-3 rounded-xl text-sm transition-all flex items-center justify-center gap-2 hover:scale-[1.02]">
-                  <Rocket className="w-4 h-4" /> Launch Skill Sphere
+                  Get Started Today
                 </button>
                 <a href="tel:xxxxxxxxxx"
                   className="w-full flex items-center justify-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-semibold py-3 rounded-xl text-sm transition-all">
@@ -444,17 +427,17 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
         </div>
       </section>
 
-      {/* ABOUT / SKILL SPHERE */}
+      {/* ABOUT */}
       <section id="about" className="py-12 sm:py-20 px-4 scroll-mt-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-green-400/15 border border-green-400/25 rounded-full px-4 py-1.5 mb-4">
-              <Rocket className="w-3.5 h-3.5 text-green-300" />
-              <span className="text-green-300 text-xs font-semibold tracking-wide">Skill Sphere Platform</span>
+              <BookOpen className="w-3.5 h-3.5 text-green-300" />
+              <span className="text-green-300 text-xs font-semibold tracking-wide">Our Learning Platform</span>
             </div>
-            <h2 className="text-white font-extrabold mb-4">Powered by Skill Sphere</h2>
+            <h2 className="text-white font-extrabold mb-4">How We Teach</h2>
             <p className="text-blue-100/90 max-w-2xl mx-auto leading-relaxed">
-              Skill Sphere is 317 Solutions' interactive learning platform. It is a structured environment where learners track progress, complete capstone projects, and work with mentors across 220+ skills.
+              317 Solutions provides a structured learning environment where learners track progress, complete capstone projects, and work with mentors across 220+ skills.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
@@ -475,7 +458,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
           <div className="text-center">
             <button onClick={onGetStarted}
               className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-500 text-blue-900 font-black px-8 py-3.5 rounded-xl shadow-xl shadow-amber-400/20 transition-all hover:scale-105 text-sm">
-              <Rocket className="w-4 h-4" /> Enter Skill Sphere <ArrowRight className="w-4 h-4" />
+              Get Started Today <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -553,7 +536,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-white font-extrabold mb-3">Frequently Asked Questions</h2>
-            <p className="text-blue-200/90">Everything you need to know about 317 Solutions and Skill Sphere.</p>
+            <p className="text-blue-200/90">Everything you need to know about 317 Solutions.</p>
           </div>
           <div className="space-y-3">
             {faqs.map(({ q, a }, i) => (
@@ -696,7 +679,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
                 <h3 className="text-white font-black text-sm mb-2">Research & Innovation</h3>
                 <p className="text-blue-200/90 text-xs leading-relaxed mb-3">Our curriculum is continuously refined through research and innovation to drive real skill development and lifelong learning.</p>
                 <button onClick={onGetStarted} className="w-full bg-amber-400 hover:bg-amber-500 text-blue-900 font-black py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-1.5">
-                  <Rocket className="w-3.5 h-3.5" /> Launch Skill Sphere
+                  Get Started Today
                 </button>
               </div>
             </div>
@@ -716,7 +699,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
             <div className="flex flex-wrap gap-3 justify-center">
               <button onClick={onGetStarted}
                 className="bg-amber-400 hover:bg-amber-500 text-blue-900 font-black px-7 py-3.5 rounded-xl shadow-xl transition-all hover:scale-105 text-sm flex items-center gap-2">
-                <Rocket className="w-4 h-4" /> Launch Skill Sphere
+                Get Started Today
               </button>
               <button onClick={() => handleNav('contact')}
                 className="flex items-center gap-2 border-2 border-white/25 text-white font-bold px-7 py-3.5 rounded-xl hover:border-amber-400/50 hover:text-amber-300 transition-all text-sm">
@@ -762,8 +745,8 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
                 </a>
                 <p>Evenings & Weekends</p>
                 <p>Massachusetts, USA</p>
-                <button onClick={onGetStarted} className="text-amber-400/70 hover:text-amber-300 font-semibold transition-colors text-left mt-2 flex items-center gap-1">
-                  <Rocket className="w-3 h-3" /> Skill Sphere Login
+                <button onClick={onGetStarted} className="text-amber-400/70 hover:text-amber-300 font-semibold transition-colors text-left mt-2">
+                  Get Started
                 </button>
               </div>
             </div>
