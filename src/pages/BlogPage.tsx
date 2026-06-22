@@ -226,7 +226,7 @@ function PostDetail({ post, onBack }: { post: BlogPost; onBack: () => void }) {
           <PiLogo size="sm" />
           <div className="flex-1">
             <p className="text-white font-black text-base mb-1">Want to learn more?</p>
-            <p className="text-blue-200/65 text-sm mb-4">Join 317 Solutions — 1-on-1 tutoring, small groups, evenings & weekends.</p>
+            <p className="text-blue-200/65 text-sm mb-4">Join 317 Solutions: 1-on-1 tutoring, small groups, evenings and weekends.</p>
             <a href="tel:xxxxxxxxxx" className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-500 text-blue-900 font-black px-5 py-2 rounded-xl text-sm transition-all hover:scale-[1.02]">
               Call xxx-xxx-xxxx
             </a>
