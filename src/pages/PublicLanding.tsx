@@ -48,13 +48,6 @@ const whyUs = [
   'Community-driven, peer-supported learning',
 ];
 
-const stats = [
-  { value: '220+', label: 'Skills & Courses' },
-  { value: '4', label: 'Learning Stages' },
-  { value: '30+', label: 'Skill Categories' },
-  { value: '100%', label: 'Research-Driven' },
-];
-
 const categoryColors: Record<string, string> = {
   'Mathematics': 'bg-amber-400/20 text-amber-300 border-amber-400/30',
   'Computer Science': 'bg-blue-400/20 text-blue-300 border-blue-400/30',
@@ -297,18 +290,6 @@ export function PublicLanding({ onGetStarted, onGoToBlog, onMemberLogin }: Publi
         </div>
       </section>
 
-      {/* STATS BAR */}
-      <div className="py-8 sm:py-10 px-4 border-y border-white/8 bg-blue-950/30">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
-          {stats.map(({ value, label }) => (
-            <div key={label} className="text-center p-3 sm:p-4">
-              <p className="text-amber-400 mb-1" style={{ fontSize: 'clamp(1.4rem, 5vw, 2rem)', fontWeight: 800, letterSpacing: '-0.04em' }}>{value}</p>
-              <p className="text-blue-200/55 text-xs font-medium" style={{ letterSpacing: '0.04em', textTransform: 'uppercase' }}>{label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* SERVICES */}
       <section id="services" className="py-12 sm:py-20 px-4 scroll-mt-16">
         <div className="max-w-7xl mx-auto">
@@ -413,6 +394,15 @@ export function PublicLanding({ onGetStarted, onGoToBlog, onMemberLogin }: Publi
                     <span className="text-blue-100/90 text-sm leading-relaxed">{item}</span>
                   </div>
                 ))}
+              </div>
+              <div className="flex items-center gap-2 bg-amber-400/10 border border-amber-400/25 rounded-xl px-4 py-2.5 mb-2">
+                <div className="w-6 h-6 bg-amber-400/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Brain className="w-3.5 h-3.5 text-amber-400" />
+                </div>
+                <div>
+                  <p className="text-amber-300 font-black text-xs">100% Research-Driven</p>
+                  <p className="text-amber-200/60 text-xs leading-tight">Curriculum grounded in ongoing AI & STEM research</p>
+                </div>
               </div>
               <div className="border-t border-white/10 pt-5 space-y-2.5">
                 <button onClick={() => scrollToSection('contact')}
