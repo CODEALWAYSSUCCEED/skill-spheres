@@ -6,10 +6,12 @@ import {
   BookOpen, Clock, Star, ChevronDown, Calendar, Send, MapPin, Mail
 } from 'lucide-react';
 import { PiLogo } from '../components/Layout';
+import ChatBot from '../components/ChatBot';
 
 type PublicLandingProps = {
   onGetStarted: () => void;
   onGoToBlog?: () => void;
+  onMemberLogin?: () => void;
 };
 
 type BlogPost = {
@@ -82,7 +84,7 @@ const navLinks = [
 ];
 
 
-export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) {
+export function PublicLanding({ onGetStarted, onGoToBlog, onMemberLogin }: PublicLandingProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [recentPosts, setRecentPosts] = useState<BlogPost[]>([]);
@@ -191,7 +193,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
                 <Phone className="w-3.5 h-3.5" /> xxx-xxx-xxxx
               </a>
               <button
-                onClick={onGetStarted}
+                onClick={() => scrollToSection('contact')}
                 className="bg-amber-400 hover:bg-amber-500 text-blue-900 font-black px-4 py-2 rounded-lg text-sm transition-all shadow-lg shadow-amber-400/20 hover:scale-105 flex items-center gap-1.5"
               >
                 Get Started
@@ -222,7 +224,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
                 <a href="tel:xxxxxxxxxx" className="flex items-center gap-2 px-3 py-2 text-amber-300 font-semibold text-sm">
                   <Phone className="w-4 h-4" /> xxx-xxx-xxxx
                 </a>
-<button onClick={() => { onGetStarted(); setMobileOpen(false); }}
+<button onClick={() => { scrollToSection('contact'); setMobileOpen(false); }}
                   className="w-full bg-amber-400 text-blue-900 font-black py-2.5 rounded-lg text-sm flex items-center justify-center gap-2">
                   Get Started
                 </button>
@@ -281,7 +283,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
             <div className="mt-6 lg:mt-0">
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
                 <img
-                  src="/images/image.png"
+                  src="/images/image copy.png"
                   alt="317 Solutions: Skill Development in AI, Technology, Engineering, CS and Mathematics"
                   className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
@@ -413,7 +415,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
                 ))}
               </div>
               <div className="border-t border-white/10 pt-5 space-y-2.5">
-                <button onClick={onGetStarted}
+                <button onClick={() => scrollToSection('contact')}
                   className="w-full bg-amber-400 hover:bg-amber-500 text-blue-900 font-black py-3 rounded-xl text-sm transition-all flex items-center justify-center gap-2 hover:scale-[1.02]">
                   Get Started Today
                 </button>
@@ -456,7 +458,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
             ))}
           </div>
           <div className="text-center">
-            <button onClick={onGetStarted}
+            <button onClick={() => scrollToSection('contact')}
               className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-500 text-blue-900 font-black px-8 py-3.5 rounded-xl shadow-xl shadow-amber-400/20 transition-all hover:scale-105 text-sm">
               Get Started Today <ArrowRight className="w-4 h-4" />
             </button>
@@ -678,7 +680,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
               <div className="bg-gradient-to-br from-amber-400/10 to-blue-800/30 border border-amber-400/20 rounded-2xl p-5">
                 <h3 className="text-white font-black text-sm mb-2">Research & Innovation</h3>
                 <p className="text-blue-200/90 text-xs leading-relaxed mb-3">Our curriculum is continuously refined through research and innovation to drive real skill development and lifelong learning.</p>
-                <button onClick={onGetStarted} className="w-full bg-amber-400 hover:bg-amber-500 text-blue-900 font-black py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-1.5">
+                <button onClick={() => scrollToSection('contact')} className="w-full bg-amber-400 hover:bg-amber-500 text-blue-900 font-black py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-1.5">
                   Get Started Today
                 </button>
               </div>
@@ -697,7 +699,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
               Join our community of learners and mentors. Evenings and weekends, 1-on-1 or small groups. We meet you where you are.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <button onClick={onGetStarted}
+              <button onClick={() => scrollToSection('contact')}
                 className="bg-amber-400 hover:bg-amber-500 text-blue-900 font-black px-7 py-3.5 rounded-xl shadow-xl transition-all hover:scale-105 text-sm flex items-center gap-2">
                 Get Started Today
               </button>
@@ -745,8 +747,8 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
                 </a>
                 <p>Evenings & Weekends</p>
                 <p>Massachusetts, USA</p>
-                <button onClick={onGetStarted} className="text-amber-400/70 hover:text-amber-300 font-semibold transition-colors text-left mt-2">
-                  Get Started
+                <button onClick={onMemberLogin ?? onGetStarted} className="text-blue-300/50 hover:text-blue-200 font-medium transition-colors text-left mt-2">
+                  Member Login
                 </button>
               </div>
             </div>
@@ -758,6 +760,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog }: PublicLandingProps) 
           </div>
         </div>
       </footer>
+      <ChatBot />
     </div>
   );
 }

@@ -25,7 +25,7 @@ function AppInner() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-white/60 text-sm animate-pulse">Loading Skill Sphere...</div>
+        <div className="text-white/60 text-sm animate-pulse">Loading...</div>
       </div>
     );
   }
@@ -56,6 +56,7 @@ function AppInner() {
       <PublicLanding
         onGetStarted={() => setShowPublic(false)}
         onGoToBlog={() => setShowingBlog(true)}
+        onMemberLogin={() => setShowPublic(false)}
       />
     );
   }
