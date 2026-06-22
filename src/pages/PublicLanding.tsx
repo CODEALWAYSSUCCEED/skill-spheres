@@ -429,14 +429,14 @@ export function PublicLanding({ onGetStarted, onGoToBlog, onMemberLogin }: Publi
             </div>
             <h2 className="text-white font-extrabold mb-4">Teaching That Actually Works</h2>
             <p className="text-blue-100/90 max-w-2xl mx-auto leading-relaxed">
-              At 317 Solutions, we believe learning happens through doing — not just memorizing. Every session is guided by expert mentors who meet you at your level and push you forward.
+              At 317 Solutions, we believe learning happens through doing, not just memorizing. Every session is guided by expert mentors who meet you at your level and push you forward.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {[
-              { icon: Users, title: 'Expert-Led Sessions', body: 'Every session is led by a knowledgeable mentor focused entirely on you. 1-on-1 and small-group formats mean no one gets left behind and progress is visible.', color: 'text-amber-400', bg: 'bg-amber-400/10 border-amber-400/20' },
-              { icon: Target, title: 'Goal-Oriented Learning', body: 'We start by understanding what you need — a grade, a test, a career shift — then build a focused plan to get you there. No filler, no wasted time.', color: 'text-blue-300', bg: 'bg-blue-400/10 border-blue-400/20' },
-              { icon: Brain, title: 'Research-Backed Curriculum', body: 'Our curriculum is continuously refined through ongoing research in AI, STEM, and learning science — so every lesson reflects what actually prepares learners for the real world.', color: 'text-green-300', bg: 'bg-green-400/10 border-green-400/20' },
+              { icon: Users, title: 'Expert-Led Sessions', body: '1-on-1 tutoring and structured group classes led by knowledgeable mentors. Both formats are designed so every learner gets the attention and pacing they need to progress.', color: 'text-amber-400', bg: 'bg-amber-400/10 border-amber-400/20' },
+              { icon: Target, title: 'Goal-Oriented Learning', body: 'We start by understanding what you need: a grade, a test, a career shift. Then we build a focused plan to get you there with no filler and no wasted time.', color: 'text-blue-300', bg: 'bg-blue-400/10 border-blue-400/20' },
+              { icon: Brain, title: 'Research-Backed Curriculum', body: 'Our curriculum is continuously refined through ongoing research in AI, STEM, and learning science so every lesson reflects what actually prepares learners for the real world.', color: 'text-green-300', bg: 'bg-green-400/10 border-green-400/20' },
             ].map(({ icon: Icon, title, body, color, bg }) => (
               <div key={title} className={`rounded-2xl p-6 border ${bg} backdrop-blur-sm`}>
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${bg}`}>
