@@ -283,7 +283,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog, onMemberLogin }: Publi
             <div className="mt-6 lg:mt-0">
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
                 <img
-                  src="/images/image copy.png"
+                  src="/images/files_5932042-2026-06-22T21-14-27-387Z-image.png"
                   alt="317 Solutions: Skill Development in AI, Technology, Engineering, CS and Mathematics"
                   className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
