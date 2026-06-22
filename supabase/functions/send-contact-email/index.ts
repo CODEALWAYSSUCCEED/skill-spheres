@@ -6,7 +6,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
-const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") ?? "re_4BWZyfY1_GDtFYTAztbJLShikjDcWtqcS";
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") ?? "";
 const TO_EMAIL = "317solutions.ai@gmail.com";
 const FROM_EMAIL = "317 Solutions <onboarding@resend.dev>";
 
@@ -92,6 +92,14 @@ Deno.serve(async (req: Request) => {
   </div>
 </body>
 </html>`;
+
+    if (!RESEND_API_KEY) {
+      console.warn("RESEND_API_KEY secret not configured — email not sent.");
+      return new Response(
+        JSON.stringify({ success: true, warning: "Email service not configured." }),
+        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
 
     const resendRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
