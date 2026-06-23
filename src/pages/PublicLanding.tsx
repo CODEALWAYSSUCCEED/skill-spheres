@@ -228,7 +228,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog, onMemberLogin }: Publi
       </header>
 
       {/* HOME */}
-      <section id="home" className="relative pt-10 sm:pt-20 pb-12 sm:pb-28 px-4 overflow-hidden scroll-mt-16">
+      <section id="home" className="relative pt-4 sm:pt-8 pb-10 sm:pb-20 px-4 overflow-hidden scroll-mt-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(245,158,11,0.07),_transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,_rgba(59,130,246,0.15),_transparent_50%)]" />
         <div className="relative max-w-7xl mx-auto">

@@ -20,7 +20,7 @@ type VisibilityType = 'private' | 'mentor' | 'studio' | 'public';
 
 const VISIBILITY_OPTIONS: { value: VisibilityType; label: string; description: string }[] = [
   { value: 'private', label: 'Private', description: 'Only you can see this. You can change visibility later.' },
-  { value: 'mentor', label: 'Mentor Review (Recommended)', description: 'Any Skill Sphere mentor can view and grade your capstone. You will receive written feedback and a badge (Platinum / Gold / Silver / Bronze) once reviewed.' },
+  { value: 'mentor', label: 'Mentor Review (Recommended)', description: 'Any 317 Solutions mentor can view and grade your capstone. You will receive written feedback and a badge (Platinum / Gold / Silver / Bronze) once reviewed.' },
   { value: 'studio', label: 'Studio Members', description: 'Visible to members of any studio you are enrolled in, plus mentors.' },
   { value: 'public', label: 'Public Portfolio', description: 'Visible to everyone. Great for showcasing your work to future employers or collaborators.' },
 ];
@@ -693,7 +693,7 @@ export default function UniversalCapstone({ skillId, skillTitle, skillCategory }
             <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
             <div className="text-sm text-blue-200">
               <p className="font-semibold mb-0.5">Capstone submitted for review</p>
-              <p className="text-blue-200/70">A Skill Sphere mentor will review your capstone and provide written feedback with a score. You will see your evaluation results and badge level here once the review is complete. Reviews typically take 3-5 business days.</p>
+              <p className="text-blue-200/70">A 317 Solutions mentor will review your capstone and provide written feedback with a score. You will see your evaluation results and badge level here once the review is complete. Reviews typically take 3-5 business days.</p>
             </div>
           </div>
         )}
