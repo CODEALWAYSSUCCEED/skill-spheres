@@ -64,9 +64,9 @@ export function AuthForm({ onGoPublic }: AuthFormProps) {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #2563eb 50%, #3b82f6 75%, #60a5fa 100%)' }}>
       <header className="px-6 py-4 border-b border-white/10 bg-blue-900/40 flex items-center justify-between">
-        <button onClick={onGoPublic} className="flex items-center gap-2.5 hover:opacity-90 transition-opacity" aria-label="317 Solutions Home">
+        <button onClick={onGoPublic} className="flex items-center gap-2.5 hover:opacity-90 transition-opacity" aria-label="Skill Sphere Home">
           <PiLogo size="sm" />
-          <span className="text-base font-black text-white">317 Solutions</span>
+          <span className="text-base font-black text-white">Skill Sphere</span>
         </button>
         {onGoPublic && (
           <button onClick={onGoPublic} className="flex items-center gap-1.5 text-blue-200 hover:text-white text-sm transition-colors">
@@ -166,13 +166,13 @@ export function AuthForm({ onGoPublic }: AuthFormProps) {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-1.5 bg-amber-400/15 border border-amber-400/30 rounded-full px-3 py-1 mb-4">
                   <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                  <span className="text-amber-300 text-xs font-semibold tracking-wide">317 Solutions Platform</span>
+                  <span className="text-amber-300 text-xs font-semibold tracking-wide">Skill Sphere Platform</span>
                 </div>
                 <h1 className="text-2xl font-black text-white mb-1.5">
-                  {screen === 'login' ? 'Sign In to 317 Solutions' : 'Create Your Account'}
+                  {screen === 'login' ? 'Sign In to Skill Sphere' : 'Create Your Account'}
                 </h1>
                 <p className="text-blue-200/80 text-sm">
-                  {screen === 'login' ? 'Access your learning dashboard' : 'Join the 317 Solutions community'}
+                  {screen === 'login' ? 'Access your learning dashboard' : 'Join the Skill Sphere community'}
                 </p>
               </div>
 
@@ -277,7 +277,7 @@ export function AuthForm({ onGoPublic }: AuthFormProps) {
                     disabled={loading}
                     className="w-full bg-amber-400 hover:bg-amber-500 text-blue-900 font-black py-3 rounded-xl transition-all shadow-lg disabled:opacity-50 text-sm tracking-wide"
                   >
-                    {loading ? 'Please wait...' : screen === 'login' ? 'Sign In to 317 Solutions' : 'Create Account'}
+                    {loading ? 'Please wait...' : screen === 'login' ? 'Sign In to Skill Sphere' : 'Create Account'}
                   </button>
                 </form>
               </div>
@@ -327,7 +327,7 @@ export function ResetPasswordForm() {
     <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #2563eb 50%, #3b82f6 75%, #60a5fa 100%)' }}>
       <header className="px-6 py-4 border-b border-white/10 bg-blue-900/40 flex items-center">
         <PiLogo size="sm" />
-        <span className="text-base font-black text-white ml-2.5">317 Solutions</span>
+        <span className="text-base font-black text-white ml-2.5">Skill Sphere</span>
       </header>
       <div className="flex-1 flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-md">

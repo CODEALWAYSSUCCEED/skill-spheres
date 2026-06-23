@@ -259,7 +259,7 @@ export function Home({ onSelectSkill, onSelectCategory, onNavigate }: HomeProps)
             <GraduationCap className="w-4 h-4 text-amber-400" />
           </div>
           <div>
-            <h1 className="text-xl font-extrabold text-white" style={{ letterSpacing: '-0.02em' }}>317 Solutions</h1>
+            <h1 className="text-xl font-extrabold text-white" style={{ letterSpacing: '-0.02em' }}>Skill Sphere</h1>
             <p className="text-blue-200/70 text-xs">by 317 Solutions, your interactive learning dashboard</p>
           </div>
         </div>

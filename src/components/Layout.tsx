@@ -28,7 +28,7 @@ function PiLogo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="flex-shrink-0"
-      aria-label="317 Solutions"
+      aria-label="Skill Sphere"
     >
       <defs>
         <radialGradient id="piRG" cx="38%" cy="22%" r="70%">
@@ -97,7 +97,7 @@ export function Layout({ children, currentPage, onNavigate, onGoToBlog, onGoToCo
                 <div className="flex items-center gap-1.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                   <span className="text-[0.85rem] font-extrabold text-white" style={{ letterSpacing: '-0.02em' }}>
-                    317 Solutions
+                    Skill Sphere
                   </span>
                 </div>
                 <span className="text-[0.6rem] font-semibold text-white/30 hidden sm:block" style={{ letterSpacing: '0.04em' }}>
@@ -171,7 +171,7 @@ export function Layout({ children, currentPage, onNavigate, onGoToBlog, onGoToCo
         {mobileOpen && (
           <div className="md:hidden border-t border-white/8 mobile-menu-enter" style={{ background: 'rgba(10, 25, 75, 0.98)' }}>
             <div className="px-4 py-4 space-y-0.5">
-              <p className="text-label text-amber-400/40 px-3 pb-2 pt-1">317 Solutions</p>
+              <p className="text-label text-amber-400/40 px-3 pb-2 pt-1">Skill Sphere</p>
               {appLinks.map(({ label, page, icon: Icon }) => (
                 <button
                   key={page}
@@ -228,7 +228,7 @@ export function Layout({ children, currentPage, onNavigate, onGoToBlog, onGoToCo
               <div className="flex items-center gap-2.5 mb-4">
                 <PiLogo size="sm" />
                 <div>
-                  <p className="text-white font-extrabold text-sm" style={{ letterSpacing: '-0.02em' }}>317 Solutions</p>
+                  <p className="text-white font-extrabold text-sm" style={{ letterSpacing: '-0.02em' }}>Skill Sphere</p>
                   <p className="text-amber-400/50 text-label" style={{ fontSize: '0.6rem' }}>Stop Knowing, Start Learning</p>
                 </div>
               </div>
@@ -264,7 +264,7 @@ export function Layout({ children, currentPage, onNavigate, onGoToBlog, onGoToCo
           </div>
           <div className="border-t border-white/8 pt-6 text-center">
             <p className="text-white/25 text-xs" style={{ letterSpacing: '-0.01em' }}>
-              &copy; {new Date().getFullYear()} 317 Solutions. Powered by Community Learning.
+              &copy; {new Date().getFullYear()} Skill Sphere. Powered by Community Learning.
             </p>
           </div>
         </div>
