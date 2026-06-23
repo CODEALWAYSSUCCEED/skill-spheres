@@ -73,7 +73,7 @@ export function ContactPage({ onBack }: { onBack?: () => void } = {}) {
           className="flex items-center gap-1.5 text-blue-300/60 hover:text-white text-sm font-semibold mb-6 transition-colors"
           style={{ letterSpacing: '-0.01em' }}
         >
-          <ChevronLeft className="w-4 h-4" /> Back to Skill Sphere
+          <ChevronLeft className="w-4 h-4" /> Back to 317 Solutions
         </button>
       )}
       <div className="mb-8">
