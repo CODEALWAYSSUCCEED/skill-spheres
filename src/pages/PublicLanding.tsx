@@ -238,7 +238,7 @@ export function PublicLanding({ onGetStarted, onGoToBlog, onMemberLogin }: Publi
                 <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse flex-shrink-0" />
                 <span className="text-amber-300 text-xs sm:text-sm font-semibold">Community Learning Platform</span>
               </div>
-              <h1 className="text-white mb-4 sm:mb-5" style={{ fontSize: 'clamp(2rem, 8vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.05, fontFamily: 'Nunito, sans-serif' }}>
+              <h1 className="text-white mb-4 sm:mb-5" style={{ fontSize: 'clamp(2rem, 8vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.05, fontFamily: 'Montserrat, sans-serif' }}>
                 Stop Knowing,{' '}
                 <span className="text-amber-400">Start Learning</span>
               </h1>
