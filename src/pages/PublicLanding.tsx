@@ -228,10 +228,10 @@ export function PublicLanding({ onGetStarted, onGoToBlog, onMemberLogin }: Publi
       </header>
 
       {/* HOME */}
-      <section id="home" className="relative pt-4 sm:pt-6 pb-10 sm:pb-16 px-4 overflow-hidden scroll-mt-16">
+      <section id="home" className="relative min-h-[calc(100vh-60px)] flex items-center py-10 sm:py-14 px-4 overflow-hidden scroll-mt-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(245,158,11,0.07),_transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,_rgba(59,130,246,0.15),_transparent_50%)]" />
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <div>
               <div className="inline-flex items-center gap-2 bg-amber-400/15 border border-amber-400/30 rounded-full px-3 sm:px-4 py-1.5 mb-4 sm:mb-6">
